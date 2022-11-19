@@ -5,9 +5,19 @@
 }
 
 /* Add a black background color to the top navigation */
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+header {
+	background-color: rgb(215, 237, 181);
+}
+
 .topnav {
 	background-color: #333;
 	overflow: hidden;
+	padding-left: 5%;
 }
 
 /* Style the links inside the navigation bar */
@@ -37,6 +47,12 @@
 	float: left;
 	overflow: hidden;
 }
+
+.split {
+	float: right;
+
+}
+
 
 /* Style the dropdown button to fit inside the topnav */
 .dropdown .dropbtn {
@@ -88,6 +104,129 @@
 	display: block;
 }
 
+/* =======================SLIDER DESIGN START========================*/
+/* .slider {
+	position: relative;
+}
+
+.slider-item {
+	position: absolute;
+	opacity: 0;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.slider-item img {
+	height: 400px;
+	width: 100%;
+}
+
+.slider-active {
+	opacity: 1;
+	position: absolute;
+} */
+
+
+.showSlide {
+	display: none
+}
+
+.showSlide img {
+	width: 100%;
+}
+
+.slidercontainer {
+	max-width: 1000px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.left,
+.right {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+.right {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.left:hover,
+.right:hover {
+	background-color: rgba(115, 115, 115, 0.8);
+}
+
+.content {
+	color: #eff5d4;
+	font-size: 30px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.active {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+/* =======================SLIDER DESIGN END========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===============================MEDIA QUERY HEADER ========================*/
+
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
 
@@ -104,18 +243,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/*===============================MEDIA QUERY HEADER ========================*/
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
 	.topnav.responsive {
